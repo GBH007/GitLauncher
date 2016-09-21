@@ -9,7 +9,12 @@ from urllib.request import urlopen
 import zipfile
 
 class Loader:
-	def __init__(self,repo_template='https://github.com/{owner}/{0}/archive/{1}.zip',load_dir='/home/gbh007/Dropbox/projects/ProjectGitLauncher',default_tmp_file='tmp.zip',repo_owner='GBH007'):
+	def __init__(self,
+		repo_template='https://github.com/{owner}/{0}/archive/{1}.zip',
+		load_dir='/home/gbh007/Dropbox/projects/ProjectGitLauncher',
+		default_tmp_file='tmp.zip',
+		repo_owner='GBH007'
+	):
 		self.repo_template=repo_template
 		self.load_dir=load_dir
 		self.repo_owner=repo_owner
@@ -32,7 +37,7 @@ class Loader:
 		os.remove(self._fullTmpPath())
 
 def main():
-	l=Loader(repo_owner='GBHt')
+	l=Loader(repo_owner='GBH007')
 	l.load('test','123')
 	l.decompress('opa')
 	l.clear()
