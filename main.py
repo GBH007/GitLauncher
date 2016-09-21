@@ -4,8 +4,11 @@
 # email:    mrgbh007@gmail.com
 #
 
+from gitlauncher.GUI import MainWindow
+
 def main():
-	pass
+	root=MainWindow()
+	root.mainloop()
 
 if __name__=='__main__':
 	main()
